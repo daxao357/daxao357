@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котокафе "Валерий"</title>
+    <link href="https://fonts.cdnfonts.com/css/pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="stylesheet" href="static/styles/navbar.css">
+    <link rel="stylesheet" href="static/styles/bgvideo.css">
+    <link rel="stylesheet" href="static/styles/stylename.css">
+</head>
+<body>
+    <div class="navbar">
+        <label for="audioControl">
+            <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
+        </label>
+        <audio id="audio" src="static/sounds/music.mp3"></audio>
+
+        <div class="drop">
+            <button class="navbtn">&#9776;</button>
+            <div class="navlist">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="about.html">О НАС</a>
+                <a href="prices.html">ЦЕНЫ</a>
+                <a href="cats.html">КОТИКИ</a>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align: center; color: darkorange; ">Наши котики</h1>
+
+    <div class="aboutcontainer">
+        <div class="card">
+            <img src="static/images/cat2.jpg">
+            <h2>Анастасия</h2>
+            <p>Обожает игрушку-пружинку</p>
+            <button class="btn" onclick="takeCat(this)">Забрать котика</button>
+        </div>
+
+        <div class="card">
+            <img src="static/images/cat3.jpg">
+            <h2>Валерий</h2>
+            <p>Самый аристократичный взгляд</p>
+            <button class="btn" onclick="takeCat(this)">Забрать котика</button>
+        </div>
+
+        <div class="card">
+            <img src="static/images/cat1.jpg" alt="Товар 1">
+            <h2>Аска</h2>
+            <p>Постоянно выключает музыку</p>
+            <button class="btn" onclick="takeCat(this)">Забрать котика</button>
+        </div>
+
+
+        <div class="card">
+            <img src="static/images/cat4.jpg">
+            <h2>Рей</h2>
+            <p>Очень быстро бегает по кафе</p>
+            <button class="btn" onclick="takeCat(this)">Забрать котика</button>
+        </div>
+
+        <div class="card">
+            <img src="static/images/cat5.jpg">
+            <h2>Лама</h2>
+            <p>Смешно кувыркается!</p>
+            <button class="btn" onclick="takeCat(this)">Забрать котика</button>
+        </div>
+
+    </div>
+
+    </div>
+    <script src="static/js/sound.js"></script>
+</body>
+</html>
