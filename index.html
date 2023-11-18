@@ -33,21 +33,31 @@
         <div class="effect">
             <div class="video-text">
                 <div class="centered-text">
-                    <h1>Котокафе "Валерий"</h1>
-                    <h3>НОВОСИБИРСК</h3>
-                    <h5>
-                        Восточная, <span class="number">54</span>. тел. <span class="number">228-35-74</span>
-                    </h5>
-                    <h5>
-                        Спортивная, <span class="number">54</span>. тел. <span class="number">228-35-74</span>
-                    </h5>
-                    <h5>
-                        Светлая, <span class="number">54</span>. тел. <span class="number">228-35-74</span>
-                    </h5>
+                    <div class="animated-text">
+                        <h1>Котокафе "Валерий"</h1>
+                        <h3>НОВОСИБИРСК</h3>
+                        <h5>
+                            Восточная, <span class="number">54</span>. тел. <a href="tel:+72283574" class="number">228-35-74</a>
+                        </h5>
+                        <h5>
+                            Спортивная, <span class="number">54</span>. тел. <a href="tel:+72283574" class="number">228-35-74</a>
+                        </h5>
+                        <h5>
+                            Светлая, <span class="number">54</span>. тел. <a href="tel:+72283574" class="number">228-35-74</a>
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="static/js/sound.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var animatedText = document.querySelector(".animated-text");
+            animatedText.classList.add("show");
+        });
+    </script>
+
+    
 </body>
 </html>

@@ -19,58 +19,14 @@ body {
     display: block; 
 }
 
-
-.aboutcontainer {
-    margin: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 20px;
-    justify-items: center;
+a.number {
+    color: yellow;
+    text-decoration: none;
 }
 
-.card {
-    background-color: rgb(255, 226, 201);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    text-align: center;
-    padding: 20px;
-    display: grid;
-    grid-template-rows: auto 1fr 1fr;
+a.number:hover {
+    text-decoration: underline;
 }
-
-.card img {
-    max-width: 100%;
-    border-radius: 15px;
-}
-
-    .card h2 {
-        font-size: 44px;
-        margin: 10px 0;
-        color: darkorange;
-    }
-
-    .card p {
-        font-size: 20px;
-        color: black;
-    }
-
-.btn {
-    font-family: 'Pacifico', cursive;
-    font-size: 25px;
-    background-color: orange;
-    color: brown;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-    .btn:hover {
-        background-color: orangered;
-        color: white;
-    }
-
 
 @media (max-width: 767px) {
     .container {
@@ -78,38 +34,4 @@ body {
     }
 }
 
-/*
-.title > a {
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 54px;
-    font-style: italic;
-    display: inline; 
-    padding: 10px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.title > a span {
-    background-color: orange;
-    color: azure;
-    padding: 10px;
-    padding-bottom: 20px;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3);
-}
-
-.card{
-    margin: 1.5em;
-}
-
-.card>img {
-    width: 100%;
-}
-
-*/

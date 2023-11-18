@@ -42,6 +42,7 @@
 }
 
 .centered-text {
+    color: white;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -49,10 +50,21 @@
     transform: translate(-50%, -50%);
 }
 
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animated-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .centered-text h5 {
-    margin-top: 10px; /* Измените значение на свое усмотрение */
+    margin-top: 10px; 
 }
 
 .centered-text span {
-    color: yellow; /* Измените значение на свое усмотрение */
+    color: yellow;  
 }

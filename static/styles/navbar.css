@@ -1,4 +1,5 @@
-.navbar{
+.navbar {
+
     display: flex;
     background-color: orange;
 }
@@ -8,7 +9,6 @@
 }
 
 .navlist a {
-    /*font-family: "Comic Sans MS", cursive;*/
     text-decoration: none;
     font-size: 20px;
     display: block;
