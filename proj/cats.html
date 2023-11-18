@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котокафе "Валерий"</title>
+    <link href="https://fonts.cdnfonts.com/css/pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="stylesheet" href="static/styles/navbar.css">
+    <link rel="stylesheet" href="static/styles/bgvideo.css">
+    <link rel="stylesheet" href="static/styles/stylename.css">
+    <link rel="stylesheet" href="static/styles/swiper.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <label for="audioControl">
+            <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
+        </label>
+        <audio id="audio" src="static/sounds/music.mp3"></audio>
+
+        <div class="drop">
+            <button class="navbtn">&#9776;</button>
+            <div class="navlist">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="about.html">О НАС</a>
+                <a href="prices.html">ЦЕНЫ</a>
+                <a href="cats.html">КОТИКИ</a>
+            </div>
+        </div>
+    </div>
+    <div class="animated-text">
+        <h1 style="text-align: center; color: darkorange; ">Наши котики</h1>
+    </div>
+    <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="static/images/cat2.jpg">
+                        <h2>Анастасия</h2>
+                        <p>Обожает игрушку-пружинку</p>
+                        <button class="btn" onclick="openForm(this)">Забрать котика</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="static/images/cat3.jpg">
+                        <h2>Валерий</h2>
+                        <p>Самый аристократичный взгляд</p>
+                        <button class="btn" onclick="openForm(this)">Забрать котика</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="static/images/cat1.jpg" alt="Товар 1">
+                        <h2>Аска</h2>
+                        <p>Постоянно выключает музыку</p>
+                        <button class="btn" onclick="openForm(this)">Забрать котика</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="static/images/cat4.jpg">
+                        <h2>Рей</h2>
+                        <p>Очень быстро бегает по кафе</p>
+                        <button class="btn" onclick="openForm(this)">Забрать котика</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="static/images/cat5.jpg">
+                        <h2>Лама</h2>
+                        <p>Смешно кувыркается!</p>
+                        <button class="btn" onclick="openForm(this)">Забрать котика</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    <script>
+
+        function openForm(button) {
+            const formHTML = `
+            <div class="form-container" style="height: 675px;">
+                <form id="catForm">
+                    <label class="card" for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <button class="btn" type="button" onclick="submitForm()" style="margin-top: 10px; display: block;">Отправить</button>
+
+                </form>
+            </div>
+        `;
+
+            button.closest('.swiper-slide').innerHTML = formHTML;
+        }
+
+        function validatePhone(phone) {
+            var phoneRegex = /^\+?\d{1,4}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,9}$/;
+            return phoneRegex.test(phone);
+        }
+
+        function validateEmail(email) {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+
+            if (!validatePhone(phone)) {
+                alert("Пожалуйста, введите корректный номер телефона");
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Пожалуйста, введите корректный адрес электронной почты");
+                return;
+            }
+
+            if (!name.trim()) {
+                alert("Пожалуйста, введите ваше имя");
+                return;
+            }
+
+            location.reload();
+        }
+
+        const swiper = new Swiper('.swiper', {
+
+            slidesPerView: 3,
+            spaceBetween: 10,
+
+            direction: 'horizontal',
+            loop: true,
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var animatedText = document.querySelector(".animated-text");
+            animatedText.classList.add("show");
+        });
+
+    </script>
+    <script src="static/js/sound.js"></script>
+</body>
+</html>

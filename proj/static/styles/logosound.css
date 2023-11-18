@@ -1,0 +1,19 @@
+#audioControl {
+    display: none;
+}
+
+    #audioControl + label {
+        cursor: pointer;
+    }
+
+    #audioControl:checked + label {
+        /* Стили для активного состояния (например, изменение внешнего вида кнопки) */
+    }
+
+        #audioControl:checked + label + audio {
+            display: block; /* Воспроизвести аудио */
+        }
+
+    #audioControl:not(:checked) + label + audio {
+        display: none; /* Остановить аудио */
+    }

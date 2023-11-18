@@ -1,0 +1,47 @@
+.navbar {
+
+    display: flex;
+    background-color: orange;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 0.8em;
+    color: brown;
+}
+
+.navlist a:hover {
+    background-color: blanchedalmond;
+}
+
+.navbtn{
+    display: none;
+}
+
+@media (max-width: 620px) {
+    .navbtn {
+        font-size: 1.5em;
+        padding-inline: 10px;
+        padding-bottom: 3px;
+        border: none;
+        background-color: orange;
+        color: brown;
+        display: block;
+        cursor: pointer;
+    }
+    .navlist{
+        display: none;
+    }
+    .drop:hover .navlist {
+        display: block;
+        position: absolute;
+        background-color: orange;
+        z-index: 3;
+    }
+}

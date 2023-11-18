@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котокафе "Валерий"</title>
+    <link href="https://fonts.cdnfonts.com/css/pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="stylesheet" href="static/styles/navbar.css">
+    <link rel="stylesheet" href="static/styles/bgvideo.css">
+    <link rel="stylesheet" href="static/styles/stylename.css">
+</head>
+<body>
+    <div class="navbar">
+        <label for="audioControl">
+            <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
+        </label>
+        <audio id="audio" src="static/sounds/music.mp3"></audio>
+
+        <div class="drop">
+            <button class="navbtn">&#9776;</button>
+            <div class="navlist">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="about.html">О НАС</a>
+                <a href="prices.html">ЦЕНЫ</a>
+                <a href="cats.html">КОТИКИ</a>
+            </div>
+        </div>
+    </div>
+    <div class="bgvideo">
+        <video src="static/files/bgvideo.mp4" type="video/mp4" autoplay muted loop></video>
+        <div class="effect">
+            <div class="video-text">
+                <div class="centered-text">
+                    <div class="animated-text">
+                        <h1>Котокафе "Валерий"</h1>
+                        <h3>НОВОСИБИРСК</h3>
+                        <h5>
+                            Восточная, <span class="number">54</span>. тел. <a href="tel:+72283574" class="number">228-35-74</a>
+                        </h5>
+                        <h5>
+                            Спортивная, <span class="number">54</span>. тел. <a href="tel:+72283574" class="number">228-35-74</a>
+                        </h5>
+                        <h5>
+                            Светлая, <span class="number">54</span>. тел. <a href="tel:+72283574" class="number">228-35-74</a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/sound.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var animatedText = document.querySelector(".animated-text");
+            animatedText.classList.add("show");
+        });
+    </script>
+
+    
+</body>
+</html>
