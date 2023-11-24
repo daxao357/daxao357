@@ -8,17 +8,19 @@
 }
 
 .bgvideo video {
-    width: 100%;
+    width: 100vw;
     height: 93vh;
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     object-fit: cover;
     z-index: 1;
 }
 
+
 .effect {
-    width: 100%;
+    width: 100vw;
     height: 92.9vh;
     position: absolute;
     top: 0;
@@ -41,6 +43,10 @@
     height: 100%;
 }
 
+.animated-text {
+    font-size: 4vw;
+}
+
 .centered-text {
     color: white;
     text-align: center;
@@ -49,11 +55,77 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.about-text .centered-text h5 {
+    font-size: 2.2vh;
+}
+.about-text .centered-text h1 {
+    font-size: 3.3vh;
+}
+
+.prices-text .centered-text h5 {
+    font-size: 2.2vh;
+}
+
+.prices-text .centered-text h1 {
+    font-size: 3.3vh;
+}
+
+@media (max-width: 500px){
+    .about-text .centered-text h5 {
+        font-size: 1.5vh;
+    }
+
+    .about-text .centered-text h1 {
+        font-size: 2vh;
+    }
+
+    .prices-text .centered-text h5 {
+        font-size: 1.5vh;
+    }
+
+    .prices-text .centered-text h1 {
+        font-size: 2vh;
+    }
+}
+
+
+.video-text .centered-text {
+    white-space: nowrap;
+}
+
 
 .animated-text {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s, transform 1s;
+}
+
+
+@media (min-width: 1000px) {
+
+    .video-text .centered-text .animated-text h1 {
+        font-size: 5vh !important;
+    }
+
+    .video-text .centered-text .animated-text h3 {
+        font-size: 4vh !important;
+    }
+
+    .video-text .centered-text .animated-text h5 {
+        font-size: 3vh !important;
+    }
+}
+
+.video-text .centered-text .animated-text h1 {
+    font-size: 4vh;
+}
+
+.video-text .centered-text .animated-text h3 {
+    font-size: 3vh;
+}
+
+.video-text .centered-text .animated-text h5 {
+    font-size: 2vh;
 }
 
 .animated-text.show {

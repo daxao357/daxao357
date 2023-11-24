@@ -10,27 +10,31 @@
     <link rel="stylesheet" href="static/styles/navbar.css">
     <link rel="stylesheet" href="static/styles/bgvideo.css">
     <link rel="stylesheet" href="static/styles/stylename.css">
+
+    <style>
+        body {
+            background-image: url('static/images/background2.jpg');
+            background-size: cover; 
+            background-position: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -9;
+        }
+    </style>
+
 </head>
 
-<style>
-    body {
-        background-image: url('static/images/background2.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
 
-    }
-
-    body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: -9;
-    }
-</style>
 
 <body>
 
@@ -42,31 +46,32 @@
 
         <div class="drop">
             <button class="navbtn">&#9776;</button>
-            <div class="navlist">
-                <a href="index.html">ГЛАВНАЯ</a>
+            <div class="navlist" style="font-size: 10px;">
+                <a href="/">ГЛАВНАЯ</a>
                 <a href="about.html">О НАС</a>
                 <a href="prices.html">ЦЕНЫ</a>
                 <a href="cats.html">КОТИКИ</a>
             </div>
         </div>
     </div>
+    <div class="about-text">
+        <div class="centered-text" style="text-align: unset;">
+            <div class="animated-text">
+                <h1 style="text-align: center;">О НАС</h1>
 
-    <div class="centered-text" style="text-align: unset;">
-        <div class="animated-text">
-            <h1 style="text-align: center;">О НАС</h1>
+                <h5>
 
-            <h5>
+                    В котокафе "Валерий" живут бывшие бездомные коты или коты со сложной судьбой, которые столкнулись с безответственными владельцами.
+                </h5>
 
-                В котокафе "Валерий" живут бывшие бездомные коты или коты со сложной судьбой, которые столкнулись с безответственными владельцами.
-            </h5>
+                <h5>
 
-            <h5>
-
-                Каждый из них ищет самого заботливого хозяина. Благодаря котокафе, ежегодно находят дом около 60 кошек и котов.
-            </h5>
-            <h5>
-                Котокафе "Валерий" - это пространство, в котором мы (люди) учимся комфортно сосуществовать с котами. Учимся замечать их потребности, особенности, относиться с уважением к их настроению, характеру, состоянию.
-            </h5>
+                    Каждый из них ищет самого заботливого хозяина. Благодаря котокафе, ежегодно находят дом около 60 кошек и котов.
+                </h5>
+                <h5>
+                    Котокафе "Валерий" - это пространство, в котором мы (люди) учимся комфортно сосуществовать с котами. Учимся замечать их потребности, особенности, относиться с уважением к их настроению, характеру, состоянию.
+                </h5>
+            </div>
         </div>
     </div>
 

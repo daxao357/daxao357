@@ -1,19 +1,26 @@
-.navbar {
 
+.navbar {
+    height: 7vh;
     display: flex;
     background-color: orange;
 }
 
 .navlist {
     display: flex;
+    height: 7vh;
+    background-color: orange;
 }
 
 .navlist a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 3vh;
     display: block;
-    padding: 0.8em;
+    padding-right: 1em;
+    padding-left: 1em;
     color: brown;
+    margin: auto;
+    white-space: nowrap;
+
 }
 
 .navlist a:hover {
@@ -24,24 +31,48 @@
     display: none;
 }
 
-@media (max-width: 620px) {
+.logo {
+    max-width: 6vh;
+    max-height: 6vh;
+    display: block;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    margin: 5px;
+}
+
+@media (max-width: 70em) {
+    body {
+        font-size: 30px;
+    }
+
     .navbtn {
-        font-size: 1.5em;
+        font-size: 5vh;
         padding-inline: 10px;
-        padding-bottom: 3px;
+        padding-bottom: 0px;
         border: none;
         background-color: orange;
         color: brown;
         display: block;
         cursor: pointer;
     }
-    .navlist{
+
+    .navlist {
         display: none;
     }
+
     .drop:hover .navlist {
+        flex-direction: column;
         display: block;
         position: absolute;
         background-color: orange;
         z-index: 3;
+        font-size: 20px;
+        height: 1em;
+        margin: -1px;
     }
+
+    .drop:hover .navlist > * {
+        background-color: orange;
+    }
+
 }

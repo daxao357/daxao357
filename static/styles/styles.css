@@ -11,14 +11,6 @@ body {
     font-size: 34px;
 }
 
-.logo {
-    max-width: 60px; 
-    max-height: 60px; 
-
-    padding-top:3px;
-    display: block; 
-}
-
 a.number {
     color: yellow;
     text-decoration: none;
@@ -34,4 +26,6 @@ a.number:hover {
     }
 }
 
-
+.current-time {
+    font-size: 4vh;
+}

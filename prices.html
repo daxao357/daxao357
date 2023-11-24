@@ -10,27 +10,28 @@
     <link rel="stylesheet" href="static/styles/navbar.css">
     <link rel="stylesheet" href="static/styles/bgvideo.css">
     <link rel="stylesheet" href="static/styles/stylename.css">
+    <style>
+        body {
+            background-image: url('static/images/background.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: -9;
+            }
+    </style>
 </head>
 
-<style>
-    body {
-        background-image: url('static/images/background.jpeg');
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }
-
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -9;
-        }
-</style>
 
 <body>
 
@@ -50,20 +51,22 @@
             </div>
         </div>
     </div>
-    <div class="centered-text" style="text-align: unset;">
-        <div class="animated-text">
-            <h1 style="text-align: center;">НАШИ ЦЕНЫ</h1>
-            <h5>
-                Мы работаем в режиме тайм-кафе: вы оплачиваете время, которое находитесь в кафе, а чай и печенье включены в стоимость.
-                Вы можете приносить еду и напитки с собой (кроме алкоголя).
-            </h5>
+    <div class="prices-text">
+        <div class="centered-text" style="text-align: unset;">
+            <div class="animated-text">
+                <h1 style="text-align: center;">НАШИ ЦЕНЫ</h1>
+                <h5>
+                    Мы работаем в режиме тайм-кафе: вы оплачиваете время, которое находитесь в кафе, а чай и печенье включены в стоимость.
+                    Вы можете приносить еду и напитки с собой (кроме алкоголя).
+                </h5>
 
-            <h5>
-                Будние дни с <span class="number"> 11:00 </span> до <span class="number"> 17:00 </span> - <span class="number"> 300 </span> рублей первый час, далее <span class="number"> 3 </span> рубля минута.
-                Будние дни с <span class="number"> 17:00 </span> до <span class="number"> 22:00 </span> - <span class="number"> 350 </span> рублей первый час, далее <span class="number"> 3 </span> рубля минута.
-                Выходные и праздничные дни - 350 рублей первый час, далее <span class="number"> 6 </span> рублей минута.
-            </h5>
+                <h5>
+                    Будние дни с <span class="number"> 11:00 </span> до <span class="number"> 17:00 </span> - <span class="number"> 300 </span> рублей первый час, далее <span class="number"> 3 </span> рубля минута.
+                    Будние дни с <span class="number"> 17:00 </span> до <span class="number"> 22:00 </span> - <span class="number"> 350 </span> рублей первый час, далее <span class="number"> 3 </span> рубля минута.
+                    Выходные и праздничные дни - 350 рублей первый час, далее <span class="number"> 6 </span> рублей минута.
+                </h5>
 
+            </div>
         </div>
     </div>
     <script>
