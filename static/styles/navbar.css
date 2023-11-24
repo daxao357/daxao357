@@ -40,7 +40,7 @@
     margin: 5px;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 1300px) {
     body {
         font-size: 30px;
     }
