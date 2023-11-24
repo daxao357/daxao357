@@ -55,24 +55,37 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.about-text .centered-text {
+    left: 10%;
+    transform: unset;
+    top: 20%;
+    max-width: 80%;
+}
+
+.prices-text .centered-text {
+    left: 10%;
+    transform: unset;
+    top: 20%;
+    max-width: 80%;
+}
 .about-text .centered-text h5 {
-    font-size: 2.2vh;
+    font-size: 2.5vh;
 }
 .about-text .centered-text h1 {
     font-size: 3.3vh;
 }
 
 .prices-text .centered-text h5 {
-    font-size: 2.2vh;
+    font-size: 2.5vh;
 }
 
 .prices-text .centered-text h1 {
-    font-size: 3.3vh;
+    font-size: 3.5vh;
 }
 
 @media (max-width: 500px){
     .about-text .centered-text h5 {
-        font-size: 1.5vh;
+        font-size: 2vh;
     }
 
     .about-text .centered-text h1 {
@@ -80,11 +93,11 @@
     }
 
     .prices-text .centered-text h5 {
-        font-size: 1.5vh;
+        font-size: 2vh;
     }
 
     .prices-text .centered-text h1 {
-        font-size: 2vh;
+        font-size: 3vh;
     }
 }
 
