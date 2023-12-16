@@ -6,23 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Котокафе "Валерий"</title>
     <link href="https://fonts.cdnfonts.com/css/pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="stylesheet" href="static/styles/global.css">
     <link rel="stylesheet" href="static/styles/navbar.css">
-    <link rel="stylesheet" href="static/styles/bgvideo.css">
-    <link rel="stylesheet" href="static/styles/stylename.css">
     <link rel="stylesheet" href="static/styles/swiper.css">
+    <link rel="stylesheet" href="static/styles/text.css">
+    <link rel="stylesheet" href="static/styles/popup.css">
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="navbar">
-        <label for="audioControl">
-            <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
-        </label>
-        <audio id="audio" src="static/sounds/music.mp3"></audio>
-
+        <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
         <div class="drop">
             <button class="navbtn">&#9776;</button>
             <div class="navlist">
@@ -34,21 +29,22 @@
         </div>
     </div>
     <div class="animated-text">
-        <h1>Наши котики</h1>
+        <h1 style="margin-top: 0%">Наши котики</h1>
     </div>
     <div class="swiper">
         <div class="swiper-wrapper">
+
             <!-- Карточка 1 -->
             <div class="swiper-slide">
                 <div class="card" onclick="openPopup(this.querySelector('.popup'))">
-                    <img src="static/images/cat2.jpg">
+                    <img src="static/images/cat1.jpg">
                     <h2>Анастасия</h2>
                     <p>Обожает игрушку-пружинку</p>
                     <button class="btn" onclick="openForm(this)">Забрать котика</button>
                     <div class="popup">
                         <div class="popup-content">
                             <h2>Анастасия</h2>
-                            <p>Анастасия умеет прыгать на высокие полки и ловко ловить игрушки в воздухе.</p>
+                            <p>Умеет прыгать на высокие полки и ловко ловить игрушки в воздухе.</p>
                             <button class="btn" onclick="openForm(this)">Забрать котика</button>
                         </div>
                     </div>
@@ -58,14 +54,14 @@
             <!-- Карточка 2 -->
             <div class="swiper-slide">
                 <div class="card" onclick="openPopup(this.querySelector('.popup'))">
-                    <img src="static/images/cat3.jpg">
-                    <h2>Валерий</h2>
-                    <p>Самый аристократичный взгляд</p>
+                    <img src="static/images/cat4.jpg">
+                    <h2>Лама</h2>
+                    <p>Смешно кувыркается</p>
                     <button class="btn" onclick="openForm(this)">Забрать котика</button>
                     <div class="popup">
                         <div class="popup-content">
-                            <h2>Валерий</h2>
-                            <p>Очень умный и ласковый кот. Любит поспать на солнышке.</p>
+                            <h2>Лама</h2>
+                            <p>Энергичный и игривый котенок. Любит веселые игры.</p>
                             <button class="btn" onclick="openForm(this)">Забрать котика</button>
                         </div>
                     </div>
@@ -75,7 +71,7 @@
             <!-- Карточка 3 -->
             <div class="swiper-slide">
                 <div class="card" onclick="openPopup(this.querySelector('.popup'))">
-                    <img src="static/images/cat4.jpg">
+                    <img src="static/images/cat3.jpg">
                     <h2>Рей</h2>
                     <p>Очень быстро бегает по кафе</p>
                     <button class="btn" onclick="openForm(this)">Забрать котика</button>
@@ -92,14 +88,14 @@
             <!-- Карточка 4 -->
             <div class="swiper-slide">
                 <div class="card" onclick="openPopup(this.querySelector('.popup'))">
-                    <img src="static/images/cat5.jpg">
-                    <h2>Лама</h2>
-                    <p>Смешно кувыркается!</p>
+                    <img src="static/images/cat2.jpg">
+                    <h2>Валерий</h2>
+                    <p>Самый аристократичный взгляд</p>
                     <button class="btn" onclick="openForm(this)">Забрать котика</button>
                     <div class="popup">
                         <div class="popup-content">
-                            <h2>Лама</h2>
-                            <p>Энергичный и игривый котенок. Любит веселые игры.</p>
+                            <h2>Валерий</h2>
+                            <p>Очень умный и ласковый кот. Любит поспать на солнышке.</p>
                             <button class="btn" onclick="openForm(this)">Забрать котика</button>
                         </div>
                     </div>
@@ -107,99 +103,12 @@
             </div>
 
         </div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    <script>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <script src="static/js/swiper.js"></script>
+    <script src="static/js/popup.js"></script>
+    <script src="static/js/text-animation.js"></script>
 
-        function openForm(button) {
-            const formHTML = `
-            <div class="form-container" style="height: 16.5em;">
-                <form id="catForm">
-                    <label class="card1" for="name">Ваше имя:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="phone">Телефон:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <button class="btn" type="button" onclick="submitForm(); closePopup(this.closest('.popup'))" style="margin-top: 10px; display: block;">Отправить</button>
-            </form>
-        </div>
-    `;
-
-            button.closest('.swiper-slide').innerHTML = formHTML;
-        }
-
-        function validatePhone(phone) {
-            var phoneRegex = /^\+?\d{1,4}?[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,9}$/;
-            return phoneRegex.test(phone);
-        }
-
-        function validateEmail(email) {
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-
-        function submitForm() {
-            var name = document.getElementById("name").value;
-            var phone = document.getElementById("phone").value;
-            var email = document.getElementById("email").value;
-
-            if (!validatePhone(phone)) {
-                alert("Пожалуйста, введите корректный номер телефона");
-                return;
-            }
-
-            if (!validateEmail(email)) {
-                alert("Пожалуйста, введите корректный адрес электронной почты");
-                return;
-            }
-
-            if (!name.trim()) {
-                alert("Пожалуйста, введите ваше имя");
-                return;
-            }
-
-            location.reload();
-        }
-
-        const swiper = new Swiper('.swiper', {
-
-            spaceBetween: 10,
-
-            direction: 'horizontal',
-            loop: false,
-
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                1200: {
-                    slidesPerView: 3,
-                },
-                800: {
-                    slidesPerView: 2,
-                },
-                600: {
-                    slidesPerView: 1,
-                },
-            }
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-            var animatedText = document.querySelector(".animated-text");
-            animatedText.classList.add("show");
-        });
-
-        function openPopup(popup) {
-            popup.classList.add('show');
-        }
-
-        function closePopup(popup) {
-            popup.classList.remove('show');
-        }
-
-    </script>
-    <script src="static/js/sound.js"></script>
 </body>
 </html>

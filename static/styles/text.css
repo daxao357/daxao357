@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'PacificoRegular';
+    src: url('../fonts/PacificoRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.video-text {
+    color: white;
+    z-index: 2;
+}
+
+.video-text h1 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.animated-text {
+    font-size: 4vw;
+}
+
+.centered-text {
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-text .centered-text {
+    left: 10%;
+    transform: unset;
+    top: 20%;
+    max-width: 80%;
+}
+
+.prices-text .centered-text {
+    left: 10%;
+    transform: unset;
+    top: 20%;
+    max-width: 80%;
+}
+
+.about-text .centered-text h5 {
+    font-size: 2.5vh;
+}
+
+.about-text .centered-text h1 {
+    font-size: 3.3vh;
+}
+
+.prices-text .centered-text h5 {
+    font-size: 2.5vh;
+}
+
+.prices-text .centered-text h1 {
+    font-size: 3.5vh;
+}
+
+@media (max-width: 1250px) {
+    .about-text .centered-text h5 {
+        font-size: 2vh;
+    }
+
+    .about-text .centered-text h1 {
+        font-size: 3vh;
+    }
+
+    .prices-text .centered-text h5 {
+        font-size: 2vh;
+    }
+
+    .prices-text .centered-text h1 {
+        font-size: 3vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-text .centered-text h5 {
+        font-size: 2vh;
+    }
+
+    .about-text .centered-text h1 {
+        font-size: 3vh;
+    }
+
+    .prices-text .centered-text h5 {
+        font-size: 2vh;
+    }
+
+    .prices-text .centered-text h1 {
+        font-size: 3vh;
+    }
+}
+
+
+.video-text .centered-text {
+    white-space: nowrap;
+}
+
+
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+
+@media (min-width: 1000px) {
+
+    .video-text .centered-text .animated-text h1 {
+        font-size: 5vh !important;
+    }
+
+    .video-text .centered-text .animated-text h3 {
+        font-size: 4vh !important;
+    }
+
+    .video-text .centered-text .animated-text h5 {
+        font-size: 3vh !important;
+    }
+}
+
+.video-text .centered-text .animated-text h1 {
+    font-size: 4vh;
+}
+
+.video-text .centered-text .animated-text h3 {
+    font-size: 3vh;
+}
+
+.video-text .centered-text .animated-text h5 {
+    font-size: 2vh;
+}
+
+.animated-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.centered-text h5 {
+    margin-top: 10px;
+}
+
+.centered-text span {
+    color: yellow;
+}

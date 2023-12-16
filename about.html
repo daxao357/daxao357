@@ -6,44 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Котокафе "Валерий"</title>
     <link href="https://fonts.cdnfonts.com/css/pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="stylesheet" href="static/styles/global.css">
     <link rel="stylesheet" href="static/styles/navbar.css">
-    <link rel="stylesheet" href="static/styles/bgvideo.css">
-    <link rel="stylesheet" href="static/styles/stylename.css">
-
-    <style>
-        body {
-            background-image: url('static/images/background2.jpg');
-            background-size: cover; 
-            background-position: center; 
-            height: 93vh; 
-            margin: 0; 
-        }
-
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -9;
-        }
-    </style>
-
+    <link rel="stylesheet" href="static/styles/text.css">
+    <link rel="stylesheet" href="static/styles/about-back.css">
 </head>
-
-
-
 <body>
 
     <div class="navbar">
-        <label for="audioControl">
-            <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
-        </label>
-        <audio id="audio" src="static/sounds/music.mp3"></audio>
-
+        <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
         <div class="drop">
             <button class="navbtn">&#9776;</button>
             <div class="navlist" style="font-size: 10px;">
@@ -57,30 +28,25 @@
     <div class="about-text">
         <div class="centered-text" style="text-align: unset;">
             <div class="animated-text">
-                <h1 style="text-align:center">О НАС</h1>
-
+                <h1 style="text-align:center;">О НАС</h1>
                 <h5>
-
                     В котокафе "Валерий" живут бывшие бездомные коты или коты со сложной судьбой, которые столкнулись с безответственными владельцами.
                 </h5>
-
                 <h5>
-
-                    Каждый из них ищет самого заботливого хозяина. Благодаря котокафе, ежегодно находят дом около 60 кошек и котов.
+                    Каждый из них ищет самого заботливого хозяина.
                 </h5>
                 <h5>
-                    Котокафе "Валерий" - это пространство, в котором мы (люди) учимся комфортно сосуществовать с котами. Учимся замечать их потребности, особенности, относиться с уважением к их настроению, характеру, состоянию.
+                    Благодаря котокафе, ежегодно находят дом около <span class="number"> 60 </span> кошек и котов.
+</h5>
+                <h5>
+                    Котокафе "Валерий" - это пространство, в котором мы (люди) учимся комфортно сосуществовать с котами.
+                </h5>
+                <h5>
+                    Учимся замечать их потребности, особенности, относиться с уважением к их настроению, характеру, состоянию.
                 </h5>
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var animatedText = document.querySelector(".animated-text");
-            animatedText.classList.add("show");
-        });
-    </script>
-    <script src="static/js/sound.js"></script>
+    <script src="static/js/text-animation.js"></script>
 </body>
 </html>

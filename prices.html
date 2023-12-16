@@ -6,41 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Котокафе "Валерий"</title>
     <link href="https://fonts.cdnfonts.com/css/pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="static/styles/styles.css">
+    <link rel="stylesheet" href="static/styles/global.css">
     <link rel="stylesheet" href="static/styles/navbar.css">
-    <link rel="stylesheet" href="static/styles/bgvideo.css">
-    <link rel="stylesheet" href="static/styles/stylename.css">
-    <style>
-        body {
-            background-image: url('static/images/background.jpeg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-            body::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: -9;
-            }
-    </style>
+    <link rel="stylesheet" href="static/styles/text.css">
+    <link rel="stylesheet" href="static/styles/prices-back.css">
 </head>
-
-
 <body>
-
     <div class="navbar">
-        <label for="audioControl">
-            <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
-        </label>
-        <audio id="audio" src="static/sounds/music.mp3"></audio>
-
+        <img class="logo" src="static/images/logo.png" alt="Котокафе Валерий" />
         <div class="drop">
             <button class="navbtn">&#9776;</button>
             <div class="navlist">
@@ -57,24 +30,22 @@
                 <h1 style="text-align: center;">НАШИ ЦЕНЫ</h1>
                 <h5>
                     Мы работаем в режиме тайм-кафе: вы оплачиваете время, которое находитесь в кафе, а чай и печенье включены в стоимость.
+                </h5>
+                <h5>    
                     Вы можете приносить еду и напитки с собой (кроме алкоголя).
                 </h5>
-
                 <h5>
                     Будние дни с <span class="number"> 11:00 </span> до <span class="number"> 17:00 </span> - <span class="number"> 300 </span> рублей первый час, далее <span class="number"> 3 </span> рубля минута.
-                    Будние дни с <span class="number"> 17:00 </span> до <span class="number"> 22:00 </span> - <span class="number"> 350 </span> рублей первый час, далее <span class="number"> 3 </span> рубля минута.
-                    Выходные и праздничные дни - 350 рублей первый час, далее <span class="number"> 6 </span> рублей минута.
                 </h5>
-
+                <h5>
+                    Будние дни с <span class="number"> 17:00 </span> до <span class="number"> 22:00 </span> - <span class="number"> 350 </span> рублей первый час, далее <span class="number"> 3 </span> рубля минута.
+                </h5>
+                <h5>
+                    Выходные и праздничные дни - <span class="number">350 </span> рублей первый час, далее <span class="number"> 6 </span> рублей минута.
+                </h5>
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var animatedText = document.querySelector(".animated-text");
-            animatedText.classList.add("show");
-        });
-    </script>
-    <script src="static/js/sound.js"></script>
+    <script src="static/js/text-animation.js"></script>
 </body>
 </html>
